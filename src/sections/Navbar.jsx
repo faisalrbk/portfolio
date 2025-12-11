@@ -135,26 +135,21 @@ const Navbar = () => {
       >
         <div className="flex flex-col text-3xl gap-y-4 md:text-4xl lg:text-6xl 2xl:text-8xl">
           {/* Navigation Links */}
-          {[
-            "home",
-            "services",
-            "about me",
-            "projects",
-            "tech-stack",
-            "contact",
-          ].map((section, index) => (
-            <div key={index} ref={(el) => (linksRef.current[index] = el)}>
-              <Link
-                className="transition-all duration-300 cursor-pointer hover:text-white"
-                to={section}
-                smooth={true}
-                duration={600}
-                onClick={() => setIsOpen(false)}
-              >
-                {section}
-              </Link>
-            </div>
-          ))}
+          {["home", "services", "about", "work", "contact"].map(
+            (section, index) => (
+              <div key={index} ref={(el) => (linksRef.current[index] = el)}>
+                <Link
+                  className="transition-all duration-300 cursor-pointer hover:text-white"
+                  to={section}
+                  smooth={true}
+                  duration={600}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {section}
+                </Link>
+              </div>
+            )
+          )}
         </div>
         <div
           ref={contactRef}
