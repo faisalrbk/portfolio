@@ -12,6 +12,7 @@ const AnimatedHeaderSection = ({
 }) => {
   const contextRef = useRef(null);
   const headerRef = useRef(null);
+  const titleRef = useRef(null);
   const shouldSplitTitle = title.includes(" ");
   const titleParts = shouldSplitTitle ? title.split(" ") : [title];
   useGSAP(() => {
@@ -37,6 +38,23 @@ const AnimatedHeaderSection = ({
       },
       "<+0.2"
     );
+
+    // Animate title characters
+    if (titleRef.current) {
+      const chars = titleRef.current.querySelectorAll(".title-char");
+      tl.from(
+        chars,
+        {
+          opacity: 0,
+          y: 100,
+          rotationX: -90,
+          stagger: 0.08,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+        },
+        "-=0.5"
+      );
+    }
   }, []);
   return (
     <div ref={contextRef}>
@@ -52,10 +70,17 @@ const AnimatedHeaderSection = ({
           </p>
           <div className="px-10">
             <h1
+              ref={titleRef}
               className={`flex flex-col gap-12 uppercase banner-text-responsive sm:gap-16 md:block ${textColor}`}
             >
-              {titleParts.map((part, index) => (
-                <span key={index}>{part} </span>
+              {title.split("").map((char, index) => (
+                <span
+                  key={index}
+                  className="title-char inline-block"
+                  style={{ display: char === " " ? "inline" : "inline-block" }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </span>
               ))}
             </h1>
           </div>

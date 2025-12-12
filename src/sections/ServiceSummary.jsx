@@ -42,9 +42,9 @@ const ServiceSummary = () => {
         id="title-service-2"
         className="flex items-center justify-center gap-3 translate-x-16"
       >
-        <p className="font-normal">Databases</p>
+        <p className="font-normal">Database</p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
-        <p>Performance</p>
+        <p>Design</p>
       </div>
       <div
         id="title-service-3"
@@ -57,7 +57,7 @@ const ServiceSummary = () => {
         <p>Security</p>
       </div>
       <div id="title-service-4" className="translate-x-48">
-        <p>Consulting & Strategy</p>
+        <p>Web GIS Programming</p>
       </div>
     </section>
   );
