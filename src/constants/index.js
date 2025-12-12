@@ -1,6 +1,8 @@
 // index.js
 import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const servicesData = [
   {
     title: "FullStack Development",
@@ -86,8 +88,8 @@ export const projects = [
     description:
       "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
     href: "",
-    image: "/assets/projects/mobile-accessories-store.jpg",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    image: `${BASE_URL}assets/projects/mobile-accessories-store.jpg`,
+    bgImage: `${BASE_URL}assets/backgrounds/blanket.jpg`,
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -102,8 +104,8 @@ export const projects = [
     description:
       "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
     href: "",
-    image: "/assets/projects/plant-shop.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    image: `${BASE_URL}assets/projects/plant-shop.jpg`,
+    bgImage: `${BASE_URL}assets/backgrounds/curtains.jpg`,
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -118,8 +120,8 @@ export const projects = [
     description:
       "An e-commerce platform for Apple products and accessories with deals and category filtering.",
     href: "",
-    image: "/assets/projects/apple-tech-store.jpg",
-    bgImage: "/assets/backgrounds/map.jpg",
+    image: `${BASE_URL}assets/projects/apple-tech-store.jpg`,
+    bgImage: `${BASE_URL}assets/backgrounds/map.jpg`,
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -134,8 +136,8 @@ export const projects = [
     description:
       "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
     href: "",
-    image: "/assets/projects/electronics-store.jpg",
-    bgImage: "/assets/backgrounds/poster.jpg",
+    image: `${BASE_URL}assets/projects/electronics-store.jpg`,
+    bgImage: `${BASE_URL}assets/backgrounds/poster.jpg`,
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -150,8 +152,8 @@ export const projects = [
     description:
       "A curated collection of designer home decor items, including furniture and artisan vases.",
     href: "",
-    image: "/assets/projects/home-decor-store.jpg",
-    bgImage: "/assets/backgrounds/table.jpg",
+    image: `${BASE_URL}assets/projects/home-decor-store.jpg`,
+    bgImage: `${BASE_URL}assets/backgrounds/table.jpg`,
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -166,8 +168,8 @@ export const projects = [
     description:
       "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
     href: "",
-    image: "/assets/projects/game-store.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    image: `${BASE_URL}assets/projects/game-store.jpg`,
+    bgImage: `${BASE_URL}assets/backgrounds/curtains.jpg`,
     frameworks: [
       { id: 1, name: "Svelte" },
       { id: 2, name: "Node.js" },
